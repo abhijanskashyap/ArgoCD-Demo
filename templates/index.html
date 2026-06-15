@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask GitOps Demo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.15);
+            width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .status {
+            color: #7CFC00;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 40px;
+            color: #ddd;
+        }
+
+        button {
+            background: #00d4ff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <h1>🚀 Flask GitOps Demo</h1>
+
+        <p>
+            Successfully deployed using
+            <span class="status">ArgoCD</span>
+        </p>
+
+        <p>
+            Kubernetes + Docker + GitHub + ArgoCD
+        </p>
+
+        <button onclick="showMessage()">
+            Click Me
+        </button>
+
+        <p id="msg"></p>
+    </div>
+
+    <div class="footer">
+        Version 2.0 | GitOps Deployment Pipeline
+    </div>
+
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("msg").innerHTML =
+        "🎉 Application deployed successfully through ArgoCD!";
+}
+</script>
+
+</body>
+</html>
